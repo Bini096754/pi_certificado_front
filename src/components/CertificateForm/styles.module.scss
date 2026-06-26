@@ -1,0 +1,66 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.fileInputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1e293b;
+  }
+
+  .fileInputContainer {
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 0.75rem;
+    background-color: #f8fafc;
+    transition: border-color 0.2s;
+
+    &:focus-within {
+      border-color: #3b82f6;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      font-size: 0.875rem;
+      color: #475569;
+      cursor: pointer;
+
+      &::file-selector-button {
+        background-color: #e2e8f0;
+        color: #1e293b;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        margin-right: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #cbd5e1;
+        }
+      }
+    }
+  }
+
+  .hint {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+
+  .error {
+    color: #ef4444;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+  }
+}

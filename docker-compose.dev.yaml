@@ -1,0 +1,26 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    develop:
+      watch:
+        - action: sync
+          target: /app
+          path: ./
+        - action: rebuild
+          path: ./package.json
+    env_file:
+      - .env
+    ports:
+      - "${DEV_PORT}:5173"
+    expose:
+      - 5173
+    networks:
+      - certificados_front
+
+networks:
+  certificados_front:
+    name: cert_network
+    external: true

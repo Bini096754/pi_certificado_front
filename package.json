@@ -1,0 +1,33 @@
+{
+  "name": "certific-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "docker:dev": "docker compose -f docker-compose.dev.yaml watch"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "axios": "^1.18.1",
+    "lucide-react": "^0.320.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.80.0",
+    "react-router-dom": "^6.30.4",
+    "sass": "^1.101.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "prettier": "^3.8.4",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vite-plugin-pwa": "^0.17.5"
+  }
+}
