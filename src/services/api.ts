@@ -11,9 +11,9 @@ api.interceptors.response.use(
     if (error.response && error.response.status === 401) {
       // Limpa os dados do usuário do estado global (se houver)
       // e redireciona para a tela de login
-      if (window.location.pathname !== "/") {
-        window.location.href = "/";
-      }
+      // if (window.location.pathname !== "/") {
+      //   window.location.href = "/";
+      // }
     }
     return Promise.reject(error);
   },
